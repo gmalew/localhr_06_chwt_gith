@@ -1,0 +1,39 @@
+{
+  "projectType": [
+    "sap.watt.uitools.ide.fiori",
+    "sap.watt.uitools.ide.web",
+    "com.watt.common.builder.sapui5clientbuild"
+  ],
+  "build": {
+    "buildRequired": true
+  },
+  "basevalidator": {
+    "validators": [
+      {
+        "validatorID": "jsValidator"
+      }
+    ],
+    "services": {
+      "js": "jsValidator"
+    }
+  },
+  "generation": [
+    {
+      "templateId": "servicecatalog.connectivityComponent",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Sat, 28 May 2016 19:46:15 GMT"
+    }
+  ],
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZH38PT_DE_TIME_CHG_SRV",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "dataBinding": {
+    "/webapp/view/Main.view.xml": {
+      "entitySet": "ConfigurationSet"
+    }
+  }
+}

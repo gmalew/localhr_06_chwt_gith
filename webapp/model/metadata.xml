@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZH38PT_DE_TIME_CHG_SRV" xml:lang="en" sap:schema-version="1"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Configuration" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="WorkSchedule"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Personnel No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WorkingTime" Type="Edm.String" MaxLength="4" sap:label="Working Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WorkSchedule" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="WS rule" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NewDate" Type="Edm.DateTime" Precision="0" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NewWorkingTime" Type="Edm.String" MaxLength="4" sap:label="Working Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NewWorkSchedule" Type="Edm.String" MaxLength="8" sap:label="WS rule" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="HoursList" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="WorkSchedule"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Personnel No." sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WorkingTime" Type="Edm.String" MaxLength="4" sap:label="Working Time" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WorkSchedule" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="WS rule" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Selected" Type="Edm.String" MaxLength="1" sap:label="TRUE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZH38PT_DE_TIME_CHG_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ConfigurationSet" EntityType="ZH38PT_DE_TIME_CHG_SRV.Configuration" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="HoursListSet" EntityType="ZH38PT_DE_TIME_CHG_SRV.HoursList" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="./sap/ZH38PT_DE_TIME_CHG_SRV/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link rel="latest-version" href="./sap/ZH38PT_DE_TIME_CHG_SRV/$metadata"
+                    xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

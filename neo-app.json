@@ -1,0 +1,39 @@
+{
+  "welcomeFile": "index.html",
+  "routes": [
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "i6g",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "i6g descr"
+    },
+    {
+      "path": "/webapp/resources",
+      "target": {
+        "type": "destination",
+        "name": "UI5_DEST"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/resources",
+      "target": {
+        "type": "destination",
+        "name": "UI5_DEST"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    }
+  ]
+}

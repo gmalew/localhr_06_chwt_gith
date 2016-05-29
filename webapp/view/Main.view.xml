@@ -1,0 +1,28 @@
+<mvc:View xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:sap.ui.core="sap.ui.core" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" busy="{mainView&gt;/busy}" busyIndicatorDelay="{mainView&gt;/delay}" controllerName="com.roche.chwt.controller.Main">
+	<App>
+		<pages>
+			<Page title="{i18n&gt;title}">
+				<content>
+					<Panel headerText="{i18n&gt;pleaseselectdailiyworkingtime}">
+						<content>
+							
+					
+							<RadioButtonGroup columns="1" id="radiogroup" select="onRadioButtonSelect" width="100%">
+								<buttons>
+									<RadioButton id="radiobutton1" select="" text="{i18n&gt;750h}"/>
+									<RadioButton id="radiobutton2" select="" text="{i18n&gt;775h}"/>
+									<RadioButton id="radiobutton3" select="" text="{i18n&gt;800h}"/></buttons>
+							</RadioButtonGroup>
+						</content>
+					</Panel>
+					
+					<Panel headerText="{i18n&gt;currentworkingtime}  {WorkingTime}{WorkSchedule}" id="workingtime">
+						
+						
+					</Panel>
+					
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
